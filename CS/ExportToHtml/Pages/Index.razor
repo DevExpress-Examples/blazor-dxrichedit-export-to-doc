@@ -23,7 +23,7 @@
 
     async Task ExportToHtml() {
         await richEdit.SaveDocumentAsync();
-        DevExpress.XtraRichEdit.RichEditDocumentServer server = new DevExpress.XtraRichEdit.RichEditDocumentServer();
+        using DevExpress.XtraRichEdit.RichEditDocumentServer server = new DevExpress.XtraRichEdit.RichEditDocumentServer();
         server.LoadDocument(documentContent);
         server.Options.Export.Html.EmbedImages = true;
         byte[] htmlContent = server.SaveDocument(DevExpress.XtraRichEdit.DocumentFormat.Html);
