@@ -1,0 +1,32 @@
+﻿@page "/"
+
+<DxRichEdit @ref="richEdit" @bind-DocumentContent="@documentContent" CustomizeRibbon="OnCustomizeRibbon"/>
+
+@code {
+    DxRichEdit richEdit;
+    byte[] documentContent;
+
+    protected override async Task OnInitializedAsync() {
+        documentContent = await File.ReadAllBytesAsync("Data\\Documents\\File.docx");
+        await base.OnInitializedAsync(); 
+    }
+
+    void OnCustomizeRibbon(IRibbon ribbon) {
+        IRibbonTab fileTab = ribbon.Tabs[RichEditRibbonTabNames.File];
+        IBarGroup fontGroup = fileTab.Groups[RichEditRibbonGroupNames.FileCommon];
+        IBarItem downloadMenu = fontGroup.Items[RichEditBarItemNames.DownloadMenu];
+        if (downloadMenu.Type == BarItemTypes.DropDown) {
+            IBarDropDown downloadMenuDropDown = (IBarDropDown)downloadMenu;
+            downloadMenuDropDown.Items.AddCustomButton("HTML (*.html)", ExportToHtml);
+        }
+    }
+
+    async Task ExportToHtml() {
+        await richEdit.SaveDocumentAsync();
+        DevExpress.XtraRichEdit.RichEditDocumentServer server = new DevExpress.XtraRichEdit.RichEditDocumentServer();
+        server.LoadDocument(documentContent);
+        server.Options.Export.Html.EmbedImages = true;
+        byte[] htmlContent = server.SaveDocument(DevExpress.XtraRichEdit.DocumentFormat.Html);
+        File.WriteAllBytes("Data\\Documents\\File.html", htmlContent);
+    }
+}
