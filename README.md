@@ -28,3 +28,4 @@ The [CustomizeRibbon](https://docs.devexpress.com/Blazor/DevExpress.Blazor.RichE
 - [Document Management in the Rich Text Editor](https://docs.devexpress.com/Blazor/403344/rich-edit/document-management)
 - [Rich Text Editor Examples](https://docs.devexpress.com/Blazor/403343/rich-edit/examples)
 - [Word Processing Document API](https://docs.devexpress.com/OfficeFileAPI/17488/word-processing-document-api)
+ 
