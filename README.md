@@ -29,3 +29,6 @@ The [CustomizeRibbon](https://docs.devexpress.com/Blazor/DevExpress.Blazor.RichE
 - [Rich Text Editor Examples](https://docs.devexpress.com/Blazor/403343/rich-edit/examples)
 - [Word Processing Document API](https://docs.devexpress.com/OfficeFileAPI/17488/word-processing-document-api)
  
+## More Examples
+
+- [Rich Edit for Blazor - How to check whether the document is empty](https://github.com/DevExpress-Examples/blazor-dxrichedit-check-if-document-is-empty
