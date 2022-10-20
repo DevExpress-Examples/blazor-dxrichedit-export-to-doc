@@ -31,4 +31,4 @@ The [CustomizeRibbon](https://docs.devexpress.com/Blazor/DevExpress.Blazor.RichE
  
 ## More Examples
 
-- [Blazor Rich Text Editor - How to determine whether a document is empty](https://github.com/DevExpress-Examples/blazor-dxrichedit-check-if-document-is-empty)
+- [Blazor Rich Text Editor - How to implement custom document save capabilities](https://github.com/DevExpress-Examples/blazor-dxrichedit-custom-saving)
