@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject IJSRuntime JS
 
 <DxRichEdit @ref="richEdit" @bind-DocumentContent="@documentContent" CustomizeRibbon="OnCustomizeRibbon"/>
 
@@ -17,16 +18,17 @@
         IBarItem downloadMenu = fontGroup.Items[RichEditBarItemNames.DownloadMenu];
         if (downloadMenu.Type == BarItemTypes.DropDown) {
             IBarDropDown downloadMenuDropDown = (IBarDropDown)downloadMenu;
-            downloadMenuDropDown.Items.AddCustomButton("HTML (*.html)", ExportToHtml);
+            downloadMenuDropDown.Items.AddCustomButton("DOC (*.doc)", ExportToDoc);
         }
     }
 
-    async Task ExportToHtml() {
+    async Task ExportToDoc() {
         await richEdit.SaveDocumentAsync();
         using DevExpress.XtraRichEdit.RichEditDocumentServer server = new DevExpress.XtraRichEdit.RichEditDocumentServer();
         server.LoadDocument(documentContent);
-        server.Options.Export.Html.EmbedImages = true;
-        byte[] htmlContent = server.SaveDocument(DevExpress.XtraRichEdit.DocumentFormat.Html);
-        File.WriteAllBytes("Data\\Documents\\File.html", htmlContent);
+        byte[] docContent = server.SaveDocument(DevExpress.XtraRichEdit.DocumentFormat.Doc);
+        var fileStream = new MemoryStream(docContent);
+        using var streamRef = new DotNetStreamReference(stream: fileStream);
+        await JS.InvokeVoidAsync("downloadFileFromStream", "File.doc", streamRef);
     }
 }
