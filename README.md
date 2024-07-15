@@ -23,8 +23,8 @@ The [CustomizeRibbon](https://docs.devexpress.com/Blazor/DevExpress.Blazor.RichE
 
 ## Files to Look At
 
-- [Index.razor](./CS/ExportToHtml/Pages/Index.razor)
-- [Index.razor.js](./CS/ExportToHtml/Pages/Index.razor.js)
+- [Index.razor](./CS/ExportToDoc/Pages/Index.razor)
+- [Index.razor.js](./CS/ExportToDoc/Pages/Index.razor.js)
 
 ## Documentation
 
