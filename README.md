@@ -8,7 +8,7 @@
 
 This example adds a custom button to the **Download** menu on the **File** tab. Click this button to export an open document to a file (DOC format) and save it in the project folder.
 
-![Blazor DxRichEdit export a document to the HTML](/images/export-to-html.png)
+![Blazor DxRichEdit export a document to the DOC format](/images/export-to-doc.png)
 
 Our Blazor [Rich Text Editor](https://docs.devexpress.com/Blazor/401891/rich-text-editor) supports the following document formats: DOCX, RTF, TXT, and HTML. You can use the [RichEditDocumentServer](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer) component to import and export documents in DOC format. To add this component to your application, install the [DevExpress.RichEdit.Core](https://nuget.devexpress.com/packages/DevExpress.RichEdit.Core/) package.
 
