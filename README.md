@@ -13,7 +13,7 @@ The [CustomizeRibbon](https://docs.devexpress.com/Blazor/DevExpress.Blazor.RichE
 3. [Load](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer.LoadDocument(System.Byte--)) document content to the document server.
 4. *(Optional)* Customize the document server's [export options](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditControlOptionsBase.Export).
 5. [Save](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.RichEditDocumentServer.SaveDocument(DevExpress.XtraRichEdit.DocumentFormat)) the document to a file (DOC format).
-6. Use the [](https://learn.microsoft.com/en-us/aspnet/core/blazor/file-downloads#download-from-a-stream) JS function to download the file.
+6. Use the [downloadFileFromStream](https://learn.microsoft.com/en-us/aspnet/core/blazor/file-downloads#download-from-a-stream) JS function to download the file.
 
 ## Files to Look At
 
