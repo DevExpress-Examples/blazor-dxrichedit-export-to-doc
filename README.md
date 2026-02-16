@@ -36,7 +36,7 @@ The [CustomizeRibbon](https://docs.devexpress.com/Blazor/DevExpress.Blazor.RichE
 
 - [Blazor Rich Text Editor - How to implement custom document save capabilities](https://github.com/DevExpress-Examples/blazor-dxrichedit-custom-saving)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=blazor-richedit-export-to-doc&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=blazor-richedit-export-to-doc&~~~was_helpful=no)
 
